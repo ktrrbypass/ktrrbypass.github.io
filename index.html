@@ -15,33 +15,70 @@
         background-color: rgb(31, 31, 31);
       } */
 
+      .top {
+        margin-top: 16vh;
+        margin-bottom: -2vh;
+      }
+
       .greeting {
         font-family: system-ui, -apple-system, sans-serif;
         text-align: center;
-        color: rgb(61, 61, 61);
-        font-size: 45px;
-        margin-top: 16vh;
-        margin-bottom: -1vh;
+        color: rgb(80, 80, 80);
+        font-size: 38px;
+        /* margin-top: 16vh;
+        margin-bottom: -2vh; */
+        
       }
+
       .name {
         font-family: system-ui, -apple-system, sans-serif;
         text-align: center;
-        color: rgb(61, 61, 61);
-        font-size: 2em;
-        margin-bottom: 7vh;
+        color: rgb(80, 80, 80);
+        font-size: 43px;
       }
+      
+      .middle {
+        margin-top: 3vh;
+      }
+      #start {
+        font-family: system-ui, -apple-system, sans-serif;
+        text-align: center;
+        color: rgb(80, 80, 80);
+        font-size: 1.6em;
+        width: 350px;
+        background-color: rgba(255, 255, 255, 0.014);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+      }
+
       #aboutmebasic {
         font-family: system-ui, -apple-system, sans-serif;
         text-align: center;
-        color: rgb(61, 61, 61);
+        color: rgb(80, 80, 80);
         font-size: 1.6em;
         width: 50%;
       }
-      #aboutme {
-        max-width: fit-content;
-        margin-left: auto;
-        margin-right: auto
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
+
+      #aboutme {
+        font-family: system-ui, -apple-system, sans-serif;
+        text-align: left;
+        color: rgb(80, 80, 80);
+        font-size: 1.6em;
+        width: 1000px;
+        background-color: rgba(255, 255, 255, 0.048);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
       #backgroundanimation {
         position: fixed;
         top: 0;
@@ -50,6 +87,40 @@
         height: 100%;
         z-index: -1;
       }
+
+      .bottom {
+        margin-top: 3vh;
+      }
+
+      #socials {
+        font-family: system-ui, -apple-system, sans-serif;
+        text-align: left;
+        color: rgb(80, 80, 80);
+        font-size: 1.6em;
+        width: 1000px;
+        background-color: rgba(255, 255, 255, 0.048);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+      #nowlistening {
+        font-family: system-ui, -apple-system, sans-serif;
+        text-align: left;
+        color: rgb(80, 80, 80);
+        font-size: 1.6em;
+        background-color: rgba(255, 255, 255, 0.014);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+
+      .music {
+        text-align: center;
+      }
+
     </style>
     <script src="idkwtfthisdoes.js"></script>
     <script src="idkwhatthisdoeseither.js"></script>
@@ -73,16 +144,52 @@
         showDots: false,
       });
     </script>
-    <h1 class="greeting">HI!</h1>
-    <h2 class="name">I'm Ktrrbypass!</h2>
+
+    <div class="top"></div>
     <div class="container">
-      <div id="aboutme">
-        <p
-          id="aboutmebasic"
-        >
-          My name is James Wallman and I am a 16 year old in highschool. I enjoy jailbreaking iPhones, learning about iOS
-        </p>
+      <div id="start">
+        <h1 class="greeting">hi!</h1>
+        <h2 class="name">I'm ktrrbypass!</h2>
       </div>
+      <div class="middle"></div>
+      <div id="aboutme">
+        <p>
+           >> My name is _____________ and I am a 16 year old in highschool. I enjoy messing around with iPhones, competitive swimming, and playing games!
+        </p>
+        <p>
+          <p>
+            >> It is currently <span id="current-time"></span> in Chicago, Illinois
+          </p>
+            <script>
+            const currentTime = new Date().toLocaleString("en-US", {
+              timeZone: "America/Chicago",
+              hour: "numeric",
+              minute: "numeric"
+            });
+            document.getElementById("current-time").textContent = currentTime;
+            </script>
+        </p>
+        <p>
+          >> I am currently learning how to code in <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/C_(programming_language)">
+            <img src="https://img.shields.io/badge/Language-C-teal?logo=c" alt="C" /></a> ,  <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Python_(programming_language)"> <img src="https://img.shields.io/badge/Language-Python-blue?logo=python" alt="python" /></a> ,  <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/JavaScript"> <img src="https://img.shields.io/badge/Language-JavaScript-yellow?logo=Javascript" /></a> , and <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/HTML"> <img src="https://img.shields.io/badge/Language-HTML-red?logo=html5" alt="HTML" /></a> .
+        </p>
+        <p>
+          >> Some tools I also use include - <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Microsoft_Windows"> <img src="https://img.shields.io/badge/OS-Windows-blue?logo=windows&logoColor=blue" alt="Microsoft_Windows" /></a> ,  <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Arch_Linux"> <img src="https://img.shields.io/badge/OS-ArchLinux-blue?logo=ArchLinux" alt="ArchLinux" /></a> , and <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Visual_Studio_Code"> <img src="https://img.shields.io/badge/Editor-VSCode-blue?&logo=visual-studio-code&logoColor=blue" alt="VSCode" /></a> .
+        </p>
+        <p>
+          >> Check me out here (ツ)_/¯ <a target="_blank" rel="noopener noreferrer" href="https://x.com/ktrrbypass"> <img src="https://img.shields.io/badge/Social-Twitter-black?&logo=x" alt="Twitter" /></a> <a target="_blank" rel="noopener noreferrer" href="https://discord.com/users/822833988997218314"> <img src="https://img.shields.io/badge/Discord-ktrrbypass-blue?logo=discord" alt="Discord" /></a> <a target="_blank" rel="noopener noreferrer" href="https://github.com/ktrrbypass/"> <img src="https://img.shields.io/badge/Social-Github-black?&logo=github" alt="GitHub" /></a>
+        </p>
+    </div>
+    <div class="bottom"></div>
+    <div id="nowlistening">
+      <p>
+        >> I am currently listening to:
+      </p>
+      <p class="music">
+        <a href="https://open.spotify.com/user/ha4h44bi2lg3qsqacbfm540rm?si=0bf5af2eaf1a4a65" target="_blank" rel="noopener noreferrer">
+          <img src="https://spotify-github-profile.vercel.app/api/view.svg?uid=ha4h44bi2lg3qsqacbfm540rm&cover_image=true&theme=natemoo-re&show_offline=false&background_color=121212&interchange=true&bar_color=53b14f&bar_color_cover=false&redirect=false"/>
+      </a>
+      </p>
     </div>
   </body>
 </html>
